@@ -54,6 +54,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }: FormProps) => {
             value={post.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
             required
+            name='tag'
             className='form_input'
             placeholder='#tag'
           />

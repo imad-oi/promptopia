@@ -16,7 +16,7 @@ export type Prompt = {
 const CreatePrompt = () => {
     const router = useRouter();
     const { data: session } = useSession();
-    
+
     const [submitting, setSubmitting] = useState<boolean>(false);
     const [post, setPost] = useState<Prompt>({ prompt: "", tag: "" });
 
@@ -26,6 +26,8 @@ const CreatePrompt = () => {
         setSubmitting(true);
 
         try {
+            console.log("session is", session)
+            console.log("post is", post)
             const response = await fetch("/api/prompt/new", {
                 method: "POST",
                 body: JSON.stringify({
@@ -33,12 +35,14 @@ const CreatePrompt = () => {
                     tag: post.tag,
                     userId: session?.user.id
                 }),
-            })
+            });
 
-            if (response.ok) {
+            // if (response.ok) {
+                alert("Prompt created successfully");
                 router.push("/");
-            }
+            // }
         } catch (error) {
+            alert("Failed to create prompt");
             console.log(error);
         } finally {
             setSubmitting(false);
@@ -47,7 +51,7 @@ const CreatePrompt = () => {
 
     return (
         <Form
-            type="create"
+            type="Create"
             post={post}
             setPost={setPost}
             submitting={submitting}
