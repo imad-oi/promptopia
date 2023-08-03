@@ -2,7 +2,7 @@
 ## Build and Deploy a Full Stack App Using the Official React Framework
 
 
-<div align="center">
+<div align="left">
  <h2>🛠️ Techno</h2>
  </div>
  
