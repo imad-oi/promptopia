@@ -6,4 +6,4 @@
  <h2>🛠️ Techno</h2>
  </div>
  
-[![My Skills](https://skillicons.dev/icons?i=ts,mongodb,next)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=ts,mongodb,next,googlecloud)](https://skillicons.dev)
