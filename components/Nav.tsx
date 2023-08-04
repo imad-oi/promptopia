@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { BuiltInProviderType } from "next-auth/providers/index";
 import { ClientSafeProvider, LiteralUnion, getProviders, signIn, signOut, useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { BuiltInProviderType } from "next-auth/providers/index";
 
 
 type Provider = {

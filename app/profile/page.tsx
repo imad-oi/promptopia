@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 import Profile from '@components/Profile';
-import { useSession } from "next-auth/react";
 import Post from "@models/Post";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 
@@ -48,7 +48,7 @@ const ProfilePage = () => {
     const handleEdit = async (post: Post) => {
         router.push(`/update-prompt?id=${post._id}`);
     };
-    
+
     return (
         <Profile
             name='My'

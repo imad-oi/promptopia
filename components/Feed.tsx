@@ -25,7 +25,7 @@ const PromptCardList = ({ data, handleTagClick }: PromptCardListProps) => {
 }
 
 const Feed = () => {
-  const [searchText, setSearchText] = useState<string>('');
+  const [searchText] = useState<string>('');
   const [posts, setPosts] = useState<any[]>([]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {

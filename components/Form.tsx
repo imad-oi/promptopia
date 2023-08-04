@@ -12,6 +12,12 @@ type FormProps = {
 }
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }: FormProps) => {
+
+  const sum = (a: number, b: number) => {
+    return a + b
+  }
+  sum(1, 2);
+  
   return (
     <section className='w-full max-w-full flex-start flex-col'>
       <h1 className='head_text text-left'>

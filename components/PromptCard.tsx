@@ -1,14 +1,14 @@
 'use client';
 
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 
 
 type PromptCardProps = {
   post: any,
-  handleTagClick: (tag: string) => void,
+  handleTagClick?: (tag: string) => void,
   handleEdit?: (post: any) => void
   handleDelete?: (post: any) => void
 }

@@ -28,7 +28,7 @@ const CreatePrompt = () => {
         try {
             console.log("session is", session)
             console.log("post is", post)
-            const response = await fetch("/api/prompt/new", {
+            await fetch("/api/prompt/new", {
                 method: "POST",
                 body: JSON.stringify({
                     prompt: post.prompt,
@@ -37,10 +37,8 @@ const CreatePrompt = () => {
                 }),
             });
 
-            // if (response.ok) {
-                alert("Prompt created successfully");
-                router.push("/");
-            // }
+            alert("Prompt created successfully");
+            router.push("/");
         } catch (error) {
             alert("Failed to create prompt");
             console.log(error);

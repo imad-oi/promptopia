@@ -1,5 +1,6 @@
-import PromptCard from "./PromptCard"
 import Post from "@models/Post"
+
+import PromptCard from "./PromptCard"
 
 type ProfileProps = {
   name: string,
@@ -29,7 +30,6 @@ const Profile = ({
           <PromptCard
             key={index}
             post={post}
-            handleTagClick={() => { }}
             handleDelete={() => handleDelete && handleDelete(post)}
             handleEdit={() => handleEdit && handleEdit(post)}
           />
